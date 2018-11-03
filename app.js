@@ -32,7 +32,7 @@ function FoundItemsDirective() {
   var ddo = {
     templateUrl: 'foundItems.html',
     scope: {
-      items: '<',
+      menu_items: '<',
       onRemove: '&'
     },
     controller: FoundItemsDirectiveController,
@@ -47,7 +47,7 @@ function FoundItemsDirectiveController() {
   var foundCtrl = this;
 
   foundCtrl.isNothingFound = function() {
-    if (foundCtrl.items.length === 0) {
+    if (foundCtrl.menu_items.length === 0) {
       return true;
     }
     return false;
